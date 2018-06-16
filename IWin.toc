@@ -1,0 +1,5 @@
+## Interface: 11200
+## Title: IWin
+## Notes: One button to rule them all!
+## SavedVariables: 
+IWin.lua
