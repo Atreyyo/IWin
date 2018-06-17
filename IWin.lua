@@ -33,7 +33,7 @@ function IWin:GetBuff(name,buff,stacks)
 	local a=1
 	while UnitBuff(name,a) do
 		local _, s = UnitBuff(name,a)
-		local tip = CreateFrame("GAMETOOLTIP", "buffScan")
+		local tip = IWin.t
 		local L = tip:CreateFontString()
 		local R = tip:CreateFontString()
 		L:SetFontObject(GameFontNormal)
@@ -55,7 +55,7 @@ function IWin:GetBuff(name,buff,stacks)
 	a=1
 	while UnitDebuff(name,a) do
 		local _, s = UnitDebuff(name,a)
-		local tip = CreateFrame("GAMETOOLTIP", "buffScan")
+		local tip = IWin.t
 		local L = tip:CreateFontString()
 		local R = tip:CreateFontString()
 		L:SetFontObject(GameFontNormal)
