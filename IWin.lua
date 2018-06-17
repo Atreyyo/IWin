@@ -33,16 +33,10 @@ function IWin:GetBuff(name,buff,stacks)
 	local a=1
 	while UnitBuff(name,a) do
 		local _, s = UnitBuff(name,a)
-		local tip = IWin.t
-		local L = tip:CreateFontString()
-		local R = tip:CreateFontString()
-		L:SetFontObject(GameFontNormal)
-		R:SetFontObject(GameFontNormal)
-		tip:AddFontStrings(L,R)
-		tip:SetOwner(WorldFrame, "ANCHOR_NONE")
-		tip:ClearLines()
-		tip:SetUnitBuff(name,a)
-		local text = L:GetText()
+		IWin_T:SetOwner(WorldFrame, "ANCHOR_NONE")
+		IWin_T:ClearLines()
+		IWin_T:SetUnitBuff(name,a)
+		local text = IWin_TTextLeft1:GetText()
 		if text == buff then 
 			if stacks == 1 then
 				return s
@@ -55,16 +49,10 @@ function IWin:GetBuff(name,buff,stacks)
 	a=1
 	while UnitDebuff(name,a) do
 		local _, s = UnitDebuff(name,a)
-		local tip = IWin.t
-		local L = tip:CreateFontString()
-		local R = tip:CreateFontString()
-		L:SetFontObject(GameFontNormal)
-		R:SetFontObject(GameFontNormal)
-		tip:AddFontStrings(L,R)
-		tip:SetOwner(WorldFrame, "ANCHOR_NONE")
-		tip:ClearLines()
-		tip:SetUnitDebuff(name,a)
-		local text = L:GetText()
+		IWin_T:SetOwner(WorldFrame, "ANCHOR_NONE")
+		IWin_T:ClearLines()
+		IWin_T:SetUnitDebuff(name,a)
+		local text = IWin_TTextLeft1:GetText()
 		if text == buff then 
 			if stacks == 1 then
 				return s
